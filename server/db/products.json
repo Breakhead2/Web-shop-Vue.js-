@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "title": "Футболка",
+        "color": "Белый",
+        "price": 2500,
+        "quantity": 1
+    },
+    {
+        "id": 2,
+        "title": "Блузка",
+        "color": "Красный",
+        "price": 2700,
+        "quantity": 1
+    },
+    {
+        "id": 3,
+        "title": "Куртка",
+        "color": "Синий",
+        "price": 4700,
+        "quantity": 1
+    },
+    {
+        "id": 4,
+        "title": "Платье",
+        "color": "Белый",
+        "price": 2900,
+        "quantity": 1
+    },
+    {
+        "id": 5,
+        "title": "Платье",
+        "color": "Черно-белое",
+        "price": 2700,
+        "quantity": 1
+    },
+    {
+        "id": 6,
+        "title": "Панама",
+        "color": "Синяя",
+        "price": 2000,
+        "quantity": 1
+    },
+    {
+        "id": 7,
+        "title": "Бриджи",
+        "color": "Салатовый",
+        "price": 2100,
+        "quantity": 1
+    },
+    {
+        "id": 8,
+        "title": "Худи",
+        "color": "Черно-синий",
+        "price": 3700,
+        "quantity": 1
+    }
+]

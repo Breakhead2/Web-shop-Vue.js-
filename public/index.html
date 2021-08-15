@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <title>Brand</title>
+
+  <!-- External Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+
+  <!-- Scripts -->
+  <script src="js/productsComp.js" defer></script>
+  <script src="js/cartComp.js" defer></script>
+  <script src="js/filterComp.js" defer></script>
+  <script src="js/errorComp.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+</head>
+
+<body>
+  <div class="wrapper" id="app">
+    <div class="top">
+      <header class="header">
+        <div class="top__border">
+          <div class="top__header container">
+            <div class="top__header__left">
+              <a href="index.html" class="label"><img src="images/label.png" alt="label">
+                <p class="logo__text">bran<span class="logo__text D">d</span></p>
+              </a>
+              <div class="header_form">
+                <div class="header__button__left" @click="showBrowse=!showBrowse">Browse &nbsp;
+                  <i class="fa-caret-down"></i>
+                  <div class="drop__down" v-show="showBrowse">
+                    <h3 class="drop__down__heading">Women
+                    </h3>
+                    <ul class="drop__down__menu">
+                      <li class="drop__down__list"><a class="drop__down__link" href="#">Dresses</a>
+                      </li>
+                      <li class="drop__down__list"><a class="drop__down__link" href="#">Tops</a>
+                      </li>
+                      <li class="drop__down__list"><a class="drop__down__link" href="#">Sweaters/Knits</a>
+                      </li>
+                      <li class="drop__down__list"><a class="drop__down__link" href="#">Jackets/Coats</a>
+                      </li>
+                      <li class="drop__down__list"><a class="drop__down__link" href="#">Blazers</a>
+                      </li>
+                      <li class="drop__down__list"><a class="drop__down__link" href="#">Denim</a>
+                      </li>
+                      <li class="drop__down__list"><a class="drop__down__link" href="#">Leggings/Pants</a>
+                      </li>
+                      <li class="drop__down__list"><a class="drop__down__link" href="#">Skirts/Shorts</a>
+                      </li>
+                      <li class="drop__down__list"><a class="drop__down__link" href="#">Accessories</a>
+                      </li>
+                    </ul>
+                    <h3 class="drop__down__heading men">Men
+                    </h3>
+                    <ul class="drop__down__menu">
+                      <li class=" drop__down__list"><a class="drop__down__link" href="#">Tees/Tank
+                          tops</a></li>
+                      <li class="drop__down__list"><a class="drop__down__link" href="#">Shirts/Polos</a>
+                      </li>
+                      <li class="drop__down__list"><a class="drop__down__link" href="#">Sweaters</a>
+                      </li>
+                      <li class="drop__down__list"><a class="drop__down__link" href="#">Sweatshirts/Hoodies</a>
+                      </li>
+                      <li class="drop__down__list"><a class="drop__down__link" href="#">Blazers</a>
+                      </li>
+                      <li class="drop__down__list"><a class="drop__down__link" href="#">Jackets/vests</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <filter-form></filter-form>
+              </div>
+            </div>
+            <div class="top__header__right">
+              <cart ref="cart"></cart>
+              <a href="#" class="header__button__right">My account &nbsp;
+                <i class="fa-caret-down white"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom__header">
+          <div class="bottom__background">
+            <div class="container">
+              <nav>
+                <ul class="menu">
+                  <li class="menu_list"><a class="menu__link" href="index.html">home</a>
+                  </li>
+                  <li class="menu_list"><a class="menu__link" href="#special_offers">special offers</a>
+                  </li>
+                  <li class="menu_list"><a class="menu__link" href="#products">Featured Items</a>
+                  </li>
+                  <li class="menu_list"><a class="menu__link" href="#our_offers">Our offers</a>
+                  </li>
+                  <li class="menu_list menu_list_lust"><a class="menu__link" href="#subscribe">Subscribe</a>
+                  </li>
+                  <li class="menu_list menu_list_lust"><a class="menu__link" href="#abous_us">About us & Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="background">
+        <div class="container">
+          <div class="red__block_header">
+            <message-error v-if="showError"></message-error>
+          </div>
+          <p class="text">the brand<br>
+            <span class="luxerious">of luxerious</span>&nbsp;<span class="luxerious fashion">fashion</span>
+          </p>
+        </div>
+      </section>
+      <section id="special_offers" class="product__cards container">
+        <div class="product__cards__left">
+          <a class="block" href="#">
+            <img class="image__man" src="images/for_man.png" alt="clothes for man">
+            <p class="text__image">hot deal<br><span class="red__text">for
+                man</span></p>
+          </a>
+          <a class="block" href="#">
+            <img class="image__accesories" src="images/accesories.png" alt="accesories">
+            <p class="text__image">LUXIROUS & trendy<br><span class="red__text">ACCESORIE</span></p>
+          </a>
+        </div>
+        <div class="product__cards__right">
+          <a class="block-right" href="#">
+            <img class="image__woman" src="images/for_woman.png" alt="clothes for woman">
+            <p class="text__image">30% offer<br><span class="red__text">women</span>
+            </p>
+          </a>
+          <a class="block-right" href="#">
+            <img class="image__kids" src="images/for_kids.png" alt="clothes for kids">
+            <p class="text__image">new arrivals<br><span class="red__text">for
+                kids</span></p>
+          </a>
+        </div>
+      </section>
+      <section class="fetured__items container" id="products">
+        <h2 class="headding__items">Fetured Items</h2>
+        <p class="text__items">Shop for items based on what we featured in this week</p>
+        <featured-items ref="products"></featured-items>
+        <a class="button__all__product" href="#">Browse All Product</a>
+      </section>
+      <div class="feature container" id="our_offers">
+        <div class="featute__left">
+          <img class="feature__banner" src="images/banner2.png" alt="banner sale">
+          <img class="banner__shadow" src="images/banner_shadow.png" alt="">
+          <p class="text__feature__banner">30%&nbsp;
+            <span class="red__offer">OFFER</span><br>
+            <span class="bold__woman">FOR&nbsp;WOMEN
+            </span>
+          </p>
+        </div>
+        <div class="feature__right">
+          <div class="box__feature">
+            <div class="item__heading">
+              <img class="small_image" src="images/car.png" alt="Delivery">
+              <h3 class="feature__heading">Free Delivery</h3>
+            </div>
+            <p class="list__text"> Worldwide delivery on all. Authorit
+              tively morph next-generation innov tion with extensive models.
+            </p>
+          </div>
+          <div class="box__feature">
+            <div class="item__heading">
+              <img class="small_image" src="images/sales.png" alt="Sales">
+              <h3 class="feature__heading">Sales & discounts</h3>
+            </div>
+            <p class="list__text"> Worldwide delivery on all. Authorit
+              tively morph next-generation innov tion with extensive models.
+            </p>
+          </div>
+          <div class="box__feature">
+            <div class="item__heading">
+              <img class="small_image" src="images/assurance.png" alt="Assurance">
+              <h3 class="feature__heading">Quality assurance</h3>
+            </div>
+            <p class="list__text"> Worldwide delivery on all. Authorit
+              tively morph next-generation innov tion with extensive models.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__up" id="subscribe">
+        <div class="foot_block container">
+          <div class="review">
+            <figure class="review_block">
+              <img class="photo__profile" src="images/avatar.png" alt="photo_profile">
+              <p class="footer__text">“Vestibulum quis porttitor dui! Quisque
+                viverra nunc mi,
+                a pulvinar purus condimentum a. Aliquam condimentum
+                mattis neque sed pretium”</p>
+              <figcaption>
+                <h4 class="footer__text red_text">Bin Burhan</h4>
+                <p class="text_author">Dhaka, Bd</p>
+              </figcaption>
+            </figure>
+            <div class="roller">
+              <button class="block__footer"></button>
+              <button class="block__footer"></button>
+              <button class="block__footer"></button>
+            </div>
+          </div>
+          <form action="#" class="form_footer">
+            <p class="subscribe__text">
+              <span class="form_heading">Subscribe</span><br>
+              for our newletter and promotion
+            </p>
+            <div class="form__email">
+              <input class="email_input" type="email" name="email" placeholder="Enter Your Email">
+              <button class="button_footer" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer_down container" id="abous_us">
+        <div class="footer_down_left">
+          <a href="index.html" class="label"><img src="images/label.png" alt="label">
+            <p class="logo__text">bran<span class="logo__text D">d</span></p>
+          </a>
+          <p class="text_footer_down">Objectively transition extensive data rather than
+            cross functional
+            solutions. Monotonectally
+            syndicate multidisciplinary materials before go forward benefits.
+            Intrinsicly syndicate an
+            expanded array of processes and cross-unit partnerships.
+          </p>
+          <p class="text_footer_down">
+            Efficiently plagiarize 24/365 action items and focused infomediaries.
+            Distinctively seize superior initiatives for wireless technologies.
+            Dynamically optimize.
+          </p>
+        </div>
+        <div class="footer_down_right">
+          <div class="block_footer company">
+            <h4 class="footer_down_heading">company</h4>
+            <nav>
+              <ul class="footer_list_box">
+                <li><a class="footer_link" href="index.html">Home</a> </li>
+                <li><a class="footer_link" href="#">Shop</a></li>
+                <li><a class="footer_link" href="#">About</a></li>
+                <li><a class="footer_link" href="#">How It Works</a></li>
+                <li><a class="footer_link" href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="block_footer infomation">
+            <h4 class="footer_down_heading">infomation</h4>
+            <nav>
+              <ul class="footer_list_box">
+                <li><a class="footer_link" href="#">Tearms & Condition</a></li>
+                <li><a class="footer_link" href="#">Privacy Policy</a></li>
+                <li><a class="footer_link" href="#">How to Buy</a></li>
+                <li><a class="footer_link" href="#">How to Sell</a></li>
+                <li><a class="footer_link" href="#">Promotion</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="block_footer shop__category">
+            <h4 class="footer_down_heading">shop category</h4>
+            <nav>
+              <ul class="footer_list_box">
+                <li><a class="footer_link" href="Product.html">Men</a></li>
+                <li><a class="footer_link" href="#">Women</a></li>
+                <li><a class="footer_link" href="#">Child</a></li>
+                <li><a class="footer_link" href="#">Apparel</a></li>
+                <li><a class="footer_link" href="#">Brows All</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="cop_block container">
+          <p class="copy_text">© 2021 Brand All Rights Reserved.</p>
+          <div class="social">
+            <a class="soc_log" href="#"><i class="text_cub fa-facebook"></i></a>
+            <a class="soc_log" href="#"><i class="text_cub fa-twitter"></i></a>
+            <a class="soc_log" href="#"><i class="text_cub fa-vk"></i></a>
+            <a class="soc_log" href="#"><i class="text_cub fa-pinterest-p"></i></a>
+            <a class="soc_log" href="#"><i class="text_cub fa-google"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
