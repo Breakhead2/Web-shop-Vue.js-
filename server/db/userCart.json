@@ -3,7 +3,7 @@
     "countGoods": 0,
     "contents": [
         {
-            "quantity": 1,
+            "quantity": 4,
             "id": 3,
             "title": "Куртка",
             "color": "Синий",
@@ -11,7 +11,23 @@
             "imgSrc": "images/products/3.png"
         },
         {
-            "quantity": 1,
+            "quantity": 3,
+            "id": 1,
+            "title": "Футболка",
+            "color": "Белый",
+            "price": 2500,
+            "imgSrc": "images/products/1.png"
+        },
+        {
+            "quantity": 2,
+            "id": 2,
+            "title": "Блузка",
+            "color": "Красный",
+            "price": 2700,
+            "imgSrc": "images/products/2.png"
+        },
+        {
+            "quantity": 4,
             "id": 4,
             "title": "Платье",
             "color": "Белый",
@@ -19,12 +35,12 @@
             "imgSrc": "images/products/4.png"
         },
         {
-            "quantity": 2,
-            "id": 6,
-            "title": "Панама",
-            "color": "Синяя",
-            "price": 2000,
-            "imgSrc": "images/products/6.png"
+            "quantity": 1,
+            "id": 5,
+            "title": "Платье",
+            "color": "Черно-белое",
+            "price": 2700,
+            "imgSrc": "images/products/5.png"
         }
     ]
 }
