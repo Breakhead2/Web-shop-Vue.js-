@@ -225,7 +225,7 @@ input {
 .header__button__left {
   background-image: linear-gradient(180deg, #f9f9f9 0%, #f5f5f5 100%);
   border: 1px solid #e6e6e6;
-  border-radius: 3px 0px 0px 3px;
+  border-radius: 3px;
   padding: 15px;
   cursor: pointer;
 }
@@ -580,6 +580,7 @@ a {
 }
 
 .text__items {
+  margin-left: 30px;
   margin-top: 16px;
   font-size: 16px;
   font-weight: 400;
@@ -589,6 +590,11 @@ a {
 
 .fetured__items {
   margin-top: 100px;
+}
+.fetured__items__box {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .fetured__cards {
@@ -1001,6 +1007,7 @@ a {
 
 .header_form {
   display: flex;
+  margin-right: 25px;
 }
 
 .fa-search {

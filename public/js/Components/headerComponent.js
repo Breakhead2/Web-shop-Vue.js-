@@ -56,7 +56,6 @@ Vue.component("header-comp", {
               </ul>
             </div>
           </div>
-          <filter-form></filter-form>
         </div>
       </div>
       <div class="top__header__right">

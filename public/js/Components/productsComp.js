@@ -36,7 +36,10 @@ Vue.component("featured-items", {
   template: `
     <section class="fetured__items container" id="products">
         <h2 class="headding__items">Fetured Items</h2>
-        <p class="text__items">Shop for items based on what we featured in this week</p>
+        <div class="fetured__items__box">
+          <p class="text__items">Shop for items based on what we featured in this week</p>
+          <filter-form></filter-form>
+        </div>
         <div class="fetured__cards container">
                 <item v-for="item of filtered" :item="item" :img="item.imgSrc"></item>
         </div>
