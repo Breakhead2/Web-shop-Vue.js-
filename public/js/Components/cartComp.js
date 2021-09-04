@@ -103,11 +103,8 @@ Vue.component("cart", {
       }
     });
   },
-  template: `<div class="korzina">
-                <div class="basket"  @click="showCart=!showCart">
-                    <img src="images/basket.png" alt="basket">
-                </div>
-                <div class="cart__box"  v-show="showCart">
+  template: `<div class="container">
+                <div class="cart__box"  v-show="$root.$refs.showCart.showCart">
                         <div class="cart">
                             <p  v-if="!cartItems.length" class="total__price__text">Корзина пуста</p>
                             <cart-item v-for="item of cartItems" :cart-item="item" :img="item.imgSrc">
@@ -120,7 +117,7 @@ Vue.component("cart", {
                             <a class="button__go__to" href="#">Go to cart</a>
                         </div>
                 </div>
-            </div>
+              <div>  
             `,
 });
 Vue.component("cart-item", {

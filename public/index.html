@@ -12,7 +12,7 @@
   <!-- External Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
 
-  <!-- Scripts -->
+  <!-- Scripts Components -->
   <script src="js/Components/productsComp.js" defer></script>
   <script src="js/Components/filterComp.js" defer></script>
   <script src="js/Components/cartComp.js" defer></script>
@@ -27,10 +27,8 @@
 
 <body>
   <div class="wrapper" id="app">
-    <header-comp></header-comp>
-    <div class="container">
-      <cart ref="cart"></cart>
-    </div>
+    <header-comp ref="showCart"></header-comp>
+    <cart ref="cart"></cart>
     <banner-comp></banner-comp>
     <spec-offers></spec-offers>
     <featured-items ref="products"></featured-items>

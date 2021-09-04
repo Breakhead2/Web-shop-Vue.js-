@@ -1,8 +1,8 @@
 Vue.component("header-comp", {
   data() {
     return {
+      showCart: false,
       showBrowse: false,
-      cartItems: [],
     };
   },
   template: `<header class="header">
@@ -60,7 +60,9 @@ Vue.component("header-comp", {
         </div>
       </div>
       <div class="top__header__right">
-     
+      <div class="basket"  @click="showCart=!showCart">
+        <img src="images/basket.png" alt="basket">
+      </div>
         <a href="#" class="header__button__right">My account &nbsp;
           <i class="fa-caret-down white"></i></a>
       </div>
