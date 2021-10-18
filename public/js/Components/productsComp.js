@@ -25,7 +25,7 @@ Vue.component("featured-items", {
   },
 
   mounted() {
-    this.getJson("/api/products").then((data) => {
+    this.getJson("/Web-shop-Vue.js-/server/db/products.json").then((data) => {
       for (let item of data) {
         item.imgSrc = `images/products/${item.id}.png`;
         this.products.push(item);

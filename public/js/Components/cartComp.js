@@ -69,14 +69,16 @@ Vue.component("cart", {
       })
         .then((result) => {
           result.json();
-          this.getJson("/api/cart").then((data) => {
-            console.log(data);
-            this.cartItems.push({
-              amount: data.amount,
-              countGoods: data.countGoods,
-            });
-            this.cartItems = data.contents;
-          });
+          this.getJson("Web-shop-Vue.js-/server/db/userCart.json").then(
+            (data) => {
+              console.log(data);
+              this.cartItems.push({
+                amount: data.amount,
+                countGoods: data.countGoods,
+              });
+              this.cartItems = data.contents;
+            }
+          );
         })
         .catch((error) => {
           console.log(error);
@@ -96,7 +98,7 @@ Vue.component("cart", {
     },
   },
   mounted() {
-    this.getJson("/api/cart").then((data) => {
+    this.getJson("Web-shop-Vue.js-/server/db/userCart.json").then((data) => {
       for (let item of data.contents) {
         item.imgSrc = `images/products/${item.id}.png`;
         this.cartItems.push(item);
