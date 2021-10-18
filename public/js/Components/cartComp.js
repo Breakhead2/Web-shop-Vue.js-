@@ -69,7 +69,7 @@ Vue.component("cart", {
       })
         .then((result) => {
           result.json();
-          this.getJson("Web-shop-Vue.js-/server/db/userCart.json").then(
+          this.getJson("/Web-shop-Vue.js-/server/db/userCart.json").then(
             (data) => {
               console.log(data);
               this.cartItems.push({
@@ -98,7 +98,7 @@ Vue.component("cart", {
     },
   },
   mounted() {
-    this.getJson("Web-shop-Vue.js-/server/db/userCart.json").then((data) => {
+    this.getJson("/Web-shop-Vue.js-/server/db/userCart.json").then((data) => {
       for (let item of data.contents) {
         item.imgSrc = `images/products/${item.id}.png`;
         this.cartItems.push(item);
