@@ -88,7 +88,7 @@ Vue.component("cart", {
       let remove = this.remove;
       let cart = this.cartItems;
       let find = cart.find((el) => el.id === id);
-      remove(`/api/cart/${id}`, find);
+      remove(`Web-shop-Vue.js-/server/db/userCart.json/${id}`, find);
     },
     Sum() {
       let cartPrice = 0;
